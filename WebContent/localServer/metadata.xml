@@ -1,0 +1,23 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0"
+		xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+		<Schema Namespace="Concur.Models" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Expense">
+				<Key>
+					<PropertyRef Name="ExpenseID"/>
+				</Key>
+				<Property Name="ExpenseID" Type="Edm.String" Nullable="false"/>
+				<Property Name="Detail" Type="Edm.String" Nullable="false"/>
+				<Property Name="Type" Type="Edm.String" Nullable="false"/>
+				<Property Name="Source" Type="Edm.String"/>
+				<Property Name="Date" Type="Edm.Date"/>
+				<Property Name="Currency" Type="Edm.String"/>
+				<Property Name="Amount" Type="Edm.Double"/>
+			</EntityType>
+			<EntityContainer Name="ConcurEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true"
+				xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+				<EntitySet Name="Expense" EntityType="Concur.Models.Expense"/>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

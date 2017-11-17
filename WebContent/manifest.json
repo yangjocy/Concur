@@ -8,6 +8,16 @@
 		"description": "A UI5 copy of Concur",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources": {
+			"mockServer": {
+				"uri": "/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localServer/metadata.xml"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -24,11 +34,54 @@
 	},
 	"sap.ui5": {
 		"_version": "1.1.0",
-		"rootView": "concur.concur2.main",
+		"rootView": "concur.concur2.App",
 		"dependencies": {
 			"minUI5Version": "1.30",
 			"libs": {
 				"sap.m": {}
+			}
+		},
+		"models":{
+			"":{
+				"preload":true,
+				"dataSource":"mockServer"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "concur.concur2",
+				"controlId": "concur",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "home",
+				"target": "home"
+			},{
+				"pattern": "availableExpense",
+				"name": "expense",
+				"target": "expense"
+			},{
+				"pattern": "createClaim",
+				"name": "createClaim",
+				"target": "createClaim"
+			}],
+			"targets": {
+				"home": {
+					"viewName": "home",
+					"viewLevel" : 1
+				},
+				"expense": {
+					"viewName": "expense",
+					"viewLevel" : 1
+				},
+				"createClaim": {
+					"viewName": "createClaim",
+					"viewLevel" : 2
+				}
 			}
 		}
 	}

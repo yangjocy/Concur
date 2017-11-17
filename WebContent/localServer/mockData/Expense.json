@@ -1,0 +1,35 @@
+[
+	{
+		"ExpenseID":10000000,
+		"Detail":"Grand Hotel",
+		"Type":"Hotel",
+		"Source":"Credit Card",
+		"Date":"2016-11-12",
+		"Currency":"VND",
+		"Amount":5550324
+	},{
+		"ExpenseNo":10000001,
+		"Detail":"Rex Hotel",
+		"Type":"Hotel",
+		"Source":"Credit Card",
+		"Date":"2016-12-08",
+		"Currency":"VND",
+		"Amount":9093412
+	},{
+		"ExpenseNo":10000002,
+		"Detail":"BCD Travel Agency",
+		"Type":"Airfare",
+		"Source":"Credit Card",
+		"Date":"2016-12-12",
+		"Currency":"CNY",
+		"Amount":3008
+	},{
+		"ExpenseNo":10000003,
+		"Detail":"BCD Travel Agency",
+		"Type":"Airfare",
+		"Source":"Credit Card",
+		"Date":"2017-01-12",
+		"Currency":"CNY",
+		"Amount":2990
+	}
+]

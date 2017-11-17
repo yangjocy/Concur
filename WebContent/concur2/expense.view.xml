@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="concur.concur2.expense" xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock='true'>
+
+	<Page title="Manage Expenses"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<content>
+			<Table id='expenseTable' 
+				items="{/Expense}"
+				rows="{/Expense}" >
+				<headerToolbar>
+					<Toolbar>
+						<Title text = 'Available Expense' level = 'H2'/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="4em" />
+					<Column width="12em">
+						<Text text="Detail" />
+					</Column>
+					<Column>
+						<Text text="Type" />
+					</Column>
+					<Column hAlign="Center">
+						<Text text="Source" />
+					</Column>
+					<Column hAlign="End">
+						<Text text="Date" />
+					</Column>
+					<Column hAlign="End">
+						<Text text="Amount" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<CheckBox />
+							<Text text = "{Detail}" />
+							<Text text = "{Type}"/>
+							<Text text = "{Source}"/>
+							<Text text = "{Date}"/>
+							<ObjectNumber
+								number="{Amount}"
+								unit="{Currency}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</content>
+		</Page>
+
+	</mvc:View>

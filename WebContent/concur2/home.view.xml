@@ -1,0 +1,51 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="concur.concur2.home" xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock='true'>
+	<Page title="Concur">
+		<content>
+
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create a Claim"  
+				press = 'onCreateClaim'>
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://add"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Available Expenses"
+				press = "onNavToExpense">
+				<tileContent>
+					<TileContent>
+						<content>
+							<NumericContent value="23" icon="sap-icon://expense-report"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Claims">
+				<tileContent>
+					<TileContent>
+						<content>
+							<NumericContent value="2"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="My Tasks">
+				<tileContent>
+					<TileContent>
+						<content>
+							<NumericContent value="9"  icon='sap-icon://task'/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		</content>
+	</Page>
+
+</mvc:View>
